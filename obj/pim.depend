@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1604791940 source:/home/solimar/Documentos/PIMIV/pim/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
