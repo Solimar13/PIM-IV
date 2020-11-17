@@ -13,9 +13,9 @@ int main(void) {
     struct cadastro {
     char nome[SIZE];
     char email[SIZE];
-    int numero;
-    char cpf[SIZE], telefone[SIZE], cep[SIZE], diag[SIZE], nasc[SIZE];
-    char rua[SIZE], bairro[SIZE], cidade[SIZE], estado[SIZE], comorbidade[SIZE];
+    int numero, dia, mes, ano;
+    char cpf[SIZE], telefone[SIZE], cep[SIZE], diag[SIZE];
+    char rua[SIZE], bairro[SIZE], cidade[SIZE], estado[SIZE], comorbidade[20], quais[SIZE];
     };
         struct cadastro pac;
 
@@ -26,7 +26,6 @@ int main(void) {
 
     struct tm * data = localtime(&data_ano);
     anoAtual = (data -> tm_year+1900);
-    printf("%d\n",anoAtual);
 
     system("cls");
     system("color F4");
@@ -58,9 +57,16 @@ int main(void) {
         printf("CPF: ");
         __fpurge(stdin);
         fgets(pac.cpf, 200, stdin);
-        printf("Data de nascimento: ");
+        printf("Data de nascimento:");
+        printf("\nDia: ");
         __fpurge(stdin);
-        fgets(pac.nasc, 200, stdin);
+        scanf("%d", &pac.dia);
+        printf("Mês: ");
+        __fpurge(stdin);
+        scanf("%d", &pac.mes);
+        printf("Ano: ");
+        __fpurge(stdin);
+        scanf("%d", &pac.ano);
         printf("Telefone: ");
         __fpurge(stdin);
         fgets(pac.telefone, 200, stdin);
@@ -88,15 +94,19 @@ int main(void) {
         printf("Data do diagnóstico: ");
         __fpurge(stdin);
         fgets(pac.diag, 200, stdin);
-        printf("O paciente tem alguma comorbidade? Se sim, qual? ");
+        printf("O paciente tem alguma comorbidade?");
         __fpurge(stdin);
         fgets(pac.comorbidade, 200, stdin);
-
+        if (pac.comorbidade != "Não") {
+            printf("Se sim, qual?");
+            __fpurge(stdin);
+            fgets(pac.quais, 200, stdin);
+;        }
         printf("\n");
 
         fprintf(ponteiroArquivo, "Nome: %s\n", pac.nome);
         fprintf(ponteiroArquivo, "CPF: %s\n", pac.cpf);
-        fprintf(ponteiroArquivo, "Data de nascimento: %s\n", pac.nasc);
+        fprintf(ponteiroArquivo, "Data de nascimento: %d/%d/%d\n", pac.dia, pac.mes, pac.ano);
         fprintf(ponteiroArquivo, "Telefone: %s\n", pac.telefone);
         fprintf(ponteiroArquivo, "CEP: %s\n", pac.cep);
         fprintf(ponteiroArquivo, "Rua: %s\n", pac.rua);
@@ -107,15 +117,21 @@ int main(void) {
         fprintf(ponteiroArquivo, "Email: %s\n", pac.email);
         fprintf(ponteiroArquivo, "Data do diagnostico: %s\n", pac.diag);
         fprintf(ponteiroArquivo, "Comorbidade: %s\n", pac.comorbidade);
+        if (pac.comorbidade == "Sim"); {
+            fprintf(ponteiroArquivo, "Quais? %s\n", pac.quais);
+        }
 
         fclose(ponteiroArquivo);
 
     }
+    calcidade = anoAtual - pac.ano;
+    if (calcidade > 65 || pac.comorbidade == "Sim") {
+        FILE *ponteiroRisco;
+        ponteiroRisco=(fopen("grupo de risco.txt", "a"));
+        fprintf(ponteiroRisco, "CEP: %s\n", pac.cep);
+        fprintf(ponteiroRisco, "Idade: %s\n", calcidade);
 
-
-    return 0;
+        fclose(ponteiroRisco);
+    }
 }
 
-void cadastro() {
-    printf("Teste");
-}
