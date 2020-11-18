@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <locale.h>
 #define SIZE 200
+
 int main(void) {
+    setlocale(LC_ALL, "Portuguese");
+
     char login[15] = "Solimar";
     char login1[15];
     char senha[15] = "1234";

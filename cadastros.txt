@@ -44,3 +44,19 @@ Data do diagnostico: 3
 Comorbidade: SIM
 Quais comorbidade(s)? diabetis, asma, hipertensão
 
+
+Nome: a
+CPF: 123
+Data de nascimento: 12/12/12
+Telefone: 12
+CEP: 12
+Rua: 12
+Número: 12
+Bairro: 12
+Cidade: 12
+Estado: 12
+Email: 12
+Data do diagnostico: 12
+Comorbidade: SIM
+Quais comorbidade(s)? diabétis
+
