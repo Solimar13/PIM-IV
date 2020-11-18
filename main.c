@@ -12,6 +12,7 @@ int main(void) {
     char logado;
     int calcidade;
     int retorno;
+    int risco = 0;
     struct cadastro {
     char nome[SIZE];
     char email[SIZE];
@@ -29,9 +30,12 @@ int main(void) {
     struct tm * data = localtime(&data_ano);
     anoAtual = (data -> tm_year+1900);
 
-    system("cls");
-    system("color F4");
-    printf("\n========================================================\nSistema de Cadastro para pacientes com COVID-19\n========================================================\nLOGIN: ");
+    system("cls || clear");
+//    system("color F4");
+    printf("\n========================================================\n");
+    printf("Sistema de Cadastro para pacientes com COVID-19\n");
+    printf("========================================================\n");
+    printf("LOGIN: ");
     gets(login1);
     if (strcmp(login, login1) == 0) {
         printf("SENHA: ");
@@ -70,43 +74,47 @@ int main(void) {
         fflush(stdin);
         scanf("%d", &pac.ano);
         printf("Telefone: ");
-        fflush(stdin);
-        fgets(pac.telefone, 200, stdin);
+        scanf(" %30[^\n]s", &pac.telefone);
+
         printf("CEP: ");
-        fflush(stdin);
-        fgets(pac.cep, 200, stdin);
+        scanf(" %30[^\n]s", &pac.cep);
+
         printf("Rua: ");
-        fflush(stdin);
-        fgets(pac.rua, 200, stdin);
+        scanf(" %30[^\n]s", &pac.rua);
+
         printf("Numero: ");
         fflush(stdin);
         scanf("%d", &pac.numero);
         printf("Bairro: ");
-        fflush(stdin);
-        fgets(pac.bairro, 200, stdin);
+        scanf(" %30[^\n]s", &pac.bairro);
+
         printf("Cidade: ");
-        fflush(stdin);
-        fgets(pac.cidade, 200, stdin);
+        scanf(" %30[^\n]s", &pac.cidade);
+
         printf("Estado: ");
-        fflush(stdin);
-        fgets(pac.estado, 200, stdin);
+        scanf(" %30[^\n]s", &pac.estado);
+
         printf("Email: ");
-        fflush(stdin);
-        fgets(pac.email, 200, stdin);
+        scanf(" %30[^\n]s", &pac.email);
+
         printf("Data do diagnostico: ");
-        fflush(stdin);
-        fgets(pac.diag, 200, stdin);
-        printf("O paciente tem alguma comorbidade? SIM/NA0 ");
-        fflush(stdin);
-        fgets(pac.comorbidade, 200, stdin);
-        retorno = strcmp(res, pac.comorbidade);
-        if (retorno < 0)
+        scanf(" %30[^\n]s", &pac.diag);
+        setbuf(stdin, NULL);
+
+        printf("O paciente tem alguma comorbidade? 1. Sim / 0. Não ");
+        scanf("%d", &risco);
+        setbuf(stdin, NULL);
+
+        if(risco == 1)
         {
+            strcpy(pac.comorbidade, "SIM");
             printf("Quais? ");
+
             fflush(stdin);
             fgets(pac.quais, 200, stdin);
         }
         else{
+            strcpy(pac.comorbidade, "NÃO");
             strcpy(pac.quais, "Nenhum");
         }
         printf("\n");
@@ -114,22 +122,22 @@ int main(void) {
         fprintf(ponteiroArquivo, "CPF: %s", pac.cpf);
         fprintf(ponteiroArquivo, "Data de nascimento: %d/%d/%d\n", pac.dia, pac.mes, pac.ano);
         fprintf(ponteiroArquivo, "Telefone: %s", pac.telefone);
-        fprintf(ponteiroArquivo, "CEP: %s", pac.cep);
-        fprintf(ponteiroArquivo, "Rua: %s", pac.rua);
-        fprintf(ponteiroArquivo, "Número: %i\n", pac.numero);
+        fprintf(ponteiroArquivo, "\nCEP: %s", pac.cep);
+        fprintf(ponteiroArquivo, "\nRua: %s", pac.rua);
+        fprintf(ponteiroArquivo, "\nNúmero: %i\n", pac.numero);
         fprintf(ponteiroArquivo, "Bairro: %s", pac.bairro);
-        fprintf(ponteiroArquivo, "Cidade: %s", pac.cidade);
-        fprintf(ponteiroArquivo, "Estado: %s", pac.estado);
-        fprintf(ponteiroArquivo, "Email: %s", pac.email);
-        fprintf(ponteiroArquivo, "Data do diagnostico: %s", pac.diag);
-        fprintf(ponteiroArquivo, "Comorbidade: %s", pac.comorbidade);
-        fprintf(ponteiroArquivo, "Quais comorbidade(s)? %s\n", pac.quais);
+        fprintf(ponteiroArquivo, "\nCidade: %s", pac.cidade);
+        fprintf(ponteiroArquivo, "\nEstado: %s", pac.estado);
+        fprintf(ponteiroArquivo, "\nEmail: %s", pac.email);
+        fprintf(ponteiroArquivo, "\nData do diagnostico: %s", pac.diag);
+        fprintf(ponteiroArquivo, "\nComorbidade: %s", pac.comorbidade);
+        fprintf(ponteiroArquivo, "\nQuais comorbidade(s)? %s\n", pac.quais);
         calcidade = anoAtual - pac.ano;
-        if (calcidade > 65 || retorno < 0) {
+        if (calcidade > 65 || risco == 1) {
             FILE *ponteiroRisco;
             ponteiroRisco=(fopen("grupoderisco.txt", "a"));
             fprintf(ponteiroRisco, "\nCEP: %s", pac.cep);
-            fprintf(ponteiroRisco, "Idade: %d\n", calcidade);
+            fprintf(ponteiroRisco, "\nIdade: %d\n", calcidade);
             printf("\n\nO Paciente foi identificado como pertencente ao grupo de risco.\n");
             fclose(ponteiroRisco);
     }
@@ -137,4 +145,3 @@ int main(void) {
 
     }
 }
-

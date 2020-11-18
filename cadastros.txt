@@ -1,83 +1,46 @@
-Nome: Ana Maria de Souza
 
-CPF: 755.892.443-32
-
-Data de nascimento: 1/7/1993
-Telefone: (11) 3021-4555
-
-CEP: 17050-000
-
-Rua: Amador Bueno
-
-Número: 122
-Bairro: Sumaré
-
-Cidade: São Paulo
-
-Estado: SP
-
-Email: anamaria@gmail.com
-
-Data do diagnostico: 10/10/2020
-
-Comorbidade: Não
-
-Quais? Não
-
-Nome: Claudia Rodrigues
-
-CPF: 432.222.487-74
-
-Data de nascimento: 13/2/1953
-Telefone: 17 99251-2504
-
-CEP: 14090-400
-
-Rua: Pernambuco
-
-Número: 154
-Bairro: Sumare
-
-Cidade: Guariba
-
-Estado: SP
-
-Email: claudia@gmail.com
-
-Data do diagnostico: 11/07/2020
-
-Comorbidade: Não
-
-Quais? Não
-
-
-Nome: Alberto Senna
-CPF: 000.000.001-85
-Data de nascimento: 15/11/1984
-Telefone: 
-CEP: 5
-Rua: 5
-Número: 5
-Bairro: 
-Cidade: 23
-Estado: 2
-Email: 2
-Data do diagnostico: 5
-Comorbidade: nao
-Quais comorbidade(s)? a
-
-
-Nome: Alberto Senna
-CPF: 001.002.003-85
-Data de nascimento: 15/11/1984
-Telefone: 
-CEP: 64000-000
-Rua: Rua da lama
-Número: 15
-Bairro: 
-Cidade: Teresina
-Estado: Piaui
-Email: alberto@albertosenna.com
-Data do diagnostico: 15
-Comorbidade: NAO
+Nome: Fulano da Silva
+CPF: 001.002.003-88
+Data de nascimento: 10/10/1980
+Telefone: 123
+CEP: 111111
+Rua: 1
+Número: 1
+Bairro: 1
+Cidade: 1
+Estado: 1
+Email: 1
+Data do diagnostico: 10
+Comorbidade: NÃO
 Quais comorbidade(s)? Nenhum
+
+Nome: Ribamar da Silva
+CPF: 000.000.001-55
+Data de nascimento: 10/10/1920
+Telefone: 123
+CEP: 22222222
+Rua: 1
+Número: 1
+Bairro: 1
+Cidade: 1
+Estado: 1
+Email: 1
+Data do diagnostico: 10
+Comorbidade: NÃO
+Quais comorbidade(s)? Nenhum
+
+Nome: Joao da Silva
+CPF: 123
+Data de nascimento: 10/10/1980
+Telefone: 1
+CEP: 333333
+Rua: 3
+Número: 3
+Bairro: 3
+Cidade: 3
+Estado: 3
+Email: 3
+Data do diagnostico: 3
+Comorbidade: SIM
+Quais comorbidade(s)? diabetis, asma, hipertensão
+
