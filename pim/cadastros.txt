@@ -1,0 +1,52 @@
+Nome: Ana Maria de Souza
+
+CPF: 755.892.443-32
+
+Data de nascimento: 1/7/1993
+Telefone: (11) 3021-4555
+
+CEP: 17050-000
+
+Rua: Amador Bueno
+
+Número: 122
+Bairro: Sumaré
+
+Cidade: São Paulo
+
+Estado: SP
+
+Email: anamaria@gmail.com
+
+Data do diagnostico: 10/10/2020
+
+Comorbidade: Não
+
+Quais? Não
+
+Nome: Claudia Rodrigues
+
+CPF: 432.222.487-74
+
+Data de nascimento: 13/2/1953
+Telefone: 17 99251-2504
+
+CEP: 14090-400
+
+Rua: Pernambuco
+
+Número: 154
+Bairro: Sumare
+
+Cidade: Guariba
+
+Estado: SP
+
+Email: claudia@gmail.com
+
+Data do diagnostico: 11/07/2020
+
+Comorbidade: Não
+
+Quais? Não
+

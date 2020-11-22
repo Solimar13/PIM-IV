@@ -1,0 +1,62 @@
+
+Nome: Fulano da Silva
+CPF: 001.002.003-88
+Data de nascimento: 10/10/1980
+Telefone: 123
+CEP: 111111
+Rua: 1
+Número: 1
+Bairro: 1
+Cidade: 1
+Estado: 1
+Email: 1
+Data do diagnostico: 10
+Comorbidade: NÃO
+Quais comorbidade(s)? Nenhum
+
+Nome: Ribamar da Silva
+CPF: 000.000.001-55
+Data de nascimento: 10/10/1920
+Telefone: 123
+CEP: 22222222
+Rua: 1
+Número: 1
+Bairro: 1
+Cidade: 1
+Estado: 1
+Email: 1
+Data do diagnostico: 10
+Comorbidade: NÃO
+Quais comorbidade(s)? Nenhum
+
+Nome: Joao da Silva
+CPF: 123
+Data de nascimento: 10/10/1980
+Telefone: 1
+CEP: 333333
+Rua: 3
+Número: 3
+Bairro: 3
+Cidade: 3
+Estado: 3
+Email: 3
+Data do diagnostico: 3
+Comorbidade: SIM
+Quais comorbidade(s)? diabetis, asma, hipertensão
+
+
+Nome: a
+CPF: 123
+Data de nascimento: 12/12/12
+Telefone: 12
+CEP: 12
+Rua: 12
+Número: 12
+Bairro: 12
+Cidade: 12
+Estado: 12
+Email: 12
+Data do diagnostico: 12
+Comorbidade: SIM
+Quais comorbidade(s)? diabétis
+
