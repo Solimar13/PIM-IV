@@ -56,3 +56,5 @@ dkms.conf
 cadastros.txt
 grupoderisco.txt
 *.depend
+*.layout
+
